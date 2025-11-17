@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Detalles - IX-GAMES</title>
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="15" fill="%2306b6d4"/><text x="50" y="55" font-family="Rajdhani, sans-serif" font-weight="700" font-size="60" fill="white" text-anchor="middle" dominant-baseline="middle">IX</text></svg>'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700;800&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                        logo: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            word-spacing: -0.05em;
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-900 font-sans antialiased">
+
+    <!-- HEADER MEJORADO -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
+            <a href="index.html#inicio" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-cyan-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/40 transition-all duration-300">
+                    <span class="text-white font-logo font-bold text-lg">IX</span>
+                </div>
+                <span class="text-2xl font-bold font-logo text-cyan-500 group-hover:text-cyan-600 transition-colors">IX-GAMES</span>
+            </a>
+            
+            <input type="checkbox" id="nav-toggle" class="hidden peer">
+            <label for="nav-toggle" class="md:hidden cursor-pointer z-50 p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-slate-700" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </label>
+            
+            <div class="fixed inset-0 bg-white/95 backdrop-blur-lg hidden peer-checked:flex flex-col items-center justify-center z-40 md:hidden space-y-8">
+                <label for="nav-toggle" class="absolute top-6 right-6 cursor-pointer p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </label>
+                
+                <a href="index.html#inicio" class="flex items-center space-x-3 text-slate-700 hover:text-cyan-500 transition-all duration-300 group">
+                    <div class="w-8 h-8 bg-cyan-50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors">
+                        <svg class="w-4 h-4 text-cyan-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <span class="font-heading text-xl font-semibold">Inicio</span>
+                </a>
+                
+                <a href="index.html#juegos" class="flex items-center space-x-3 text-slate-700 hover:text-cyan-500 transition-all duration-300 group">
+                    <div class="w-8 h-8 bg-cyan-50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors">
+                        <svg class="w-4 h-4 text-cyan-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <span class="font-heading text-xl font-semibold">Nuestro Juego</span>
+                </a>
+                
+                <a href="index.html#quienes-somos" class="flex items-center space-x-3 text-slate-700 hover:text-cyan-500 transition-all duration-300 group">
+                    <div class="w-8 h-8 bg-cyan-50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors">
+                        <svg class="w-4 h-4 text-cyan-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <span class="font-heading text-xl font-semibold">Quiénes Somos</span>
+                </a>
+                
+                <a href="index.html#vision" class="flex items-center space-x-3 text-slate-700 hover:text-cyan-500 transition-all duration-300 group">
+                    <div class="w-8 h-8 bg-cyan-50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-colors">
+                        <svg class="w-4 h-4 text-cyan-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <span class="font-heading text-xl font-semibold">Visión</span>
+                </a>
+                
+                <a href="index.html#contacto" class="flex items-center space-x-3 bg-cyan-500 text-white px-6 py-3 rounded-xl hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="font-heading text-xl font-semibold">Contacto</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="index.html#inicio" class="flex items-center space-x-2 px-4 py-2 rounded-lg text-slate-700 hover:text-cyan-500 hover:bg-cyan-50 transition-all duration-300 group">
+                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    <span class="font-semibold">Inicio</span>
+                </a>
+                
+                <a href="index.html#juegos" class="flex items-center space-x-2 px-4 py-2 rounded-lg text-slate-700 hover:text-cyan-500 hover:bg-cyan-50 transition-all duration-300 group">
+                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="font-semibold">Nuestro Juego</span>
+                </a>
+                
+                <a href="index.html#quienes-somos" class="flex items-center space-x-2 px-4 py-2 rounded-lg text-slate-700 hover:text-cyan-500 hover:bg-cyan-50 transition-all duration-300 group">
+                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span class="font-semibold">Quiénes Somos</span>
+                </a>
+                
+                <a href="index.html#vision" class="flex items-center space-x-2 px-4 py-2 rounded-lg text-slate-700 hover:text-cyan-500 hover:bg-cyan-50 transition-all duration-300 group">
+                    <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                    <span class="font-semibold">Visión</span>
+                </a>
+                
+                <a href="index.html#contacto" class="ml-4 flex items-center space-x-2 bg-cyan-500 text-white px-6 py-2.5 rounded-xl hover:bg-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/40">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span class="font-semibold">Contacto</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- SECCIÓN TÍTULO -->
+        <section class="relative py-16 md:py-24 bg-gradient-to-br from-gray-50 to-cyan-50 text-center overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-400/10 to-purple-500/10"></div>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4">
+                <h1 class="font-heading text-4xl md:text-6xl font-bold text-slate-900 mb-4">
+                    Más Detalles Sobre <span class="text-cyan-500">Simplix</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-700 font-semibold">
+                    Descubre todo sobre nuestro innovador juego educativo
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTENIDO -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+                
+                <!-- LAYOUT DE GRID -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+
+                    <!-- COLUMNA PRINCIPAL -->
+                    <div class="lg:col-span-2 space-y-12">
+                        <!-- Información del Juego -->
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
+                            <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                                Información del <span class="text-cyan-500">Juego</span>
+                            </h2>
+                            <div class="space-y-6 text-lg text-gray-700 text-justify">
+                                <p>
+                                    <strong class="text-cyan-600">Simplix</strong> es nuestro primer lanzamiento, un juego revolucionario que reinventa el dominó clásico para el aula y el hogar. Diseñado específicamente para hacer el aprendizaje de las matemáticas interactivo, táctil y divertido.
+                                </p>
+                                <p>
+                                    Conecta ecuaciones de racionalización con sus soluciones en fichas de alta calidad impresas en 3D, creando una experiencia de aprendizaje única que combina diversión y educación de manera perfecta.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Objetivo del Juego -->
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
+                            <h3 class="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                                Objetivo del <span class="text-cyan-500">Juego</span>
+                            </h3>
+                            <div class="space-y-6 text-lg text-gray-700 text-justify">
+                                <p>
+                                    El objetivo principal es ser el primer jugador en conectar correctamente todas sus ecuaciones con sus soluciones correspondientes. Los puntos se obtienen mediante la resolución precisa de problemas matemáticos y la estrategia de colocación de fichas.
+                                </p>
+                                <p>
+                                    Cada partida es una nueva oportunidad para fortalecer habilidades matemáticas mientras te diviertes con amigos y familiares. ¡El aprendizaje nunca fue tan entretenido!
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Características Especiales -->
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
+                            <h3 class="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                                Características <span class="text-cyan-500">Especiales</span>
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-700 text-justify">Fichas impresas en 3D de alta durabilidad</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-700 text-justify">Sistema de aprendizaje progresivo</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-700 text-justify">Material educativo complementario</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                        </svg>
+                                    </div>
+                                    <p class="text-gray-700 text-justify">Modo individual y grupal disponible</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA LATERAL -->
+                    <aside class="lg:col-span-1 lg:sticky lg:top-28 h-fit">
+                        <div class="bg-gray-50 rounded-2xl shadow-xl p-6 border border-gray-200 transition-all duration-300 hover-lift">
+                            
+                            <img src="logosimplix.jpg" alt="Imagen del juego Simplix" class="rounded-xl shadow-md w-full mb-6 transform hover:scale-105 transition-transform duration-300">
+
+                            <h3 class="font-heading text-2xl font-bold mb-6 text-center text-slate-900">Características</h3>
+
+                            <ul class="space-y-4 text-lg text-gray-700">
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                    </svg>
+                                    <span><strong class="text-cyan-600">Jugadores:</strong> 4 jugadores</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span><strong class="text-cyan-600">Tiempo:</strong> 15-25 minutos</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.22-.1.446-.1.679 0 .404.092.79.26 1.15l-2.735 4.738c-.168.29-.26.61-.26.942 0 .404.092.79.26 1.15l2.735 4.738c.168.29.26.61.26.942a2.022 2.022 0 01-2.22 2.016c-.787-.06-1.503-.448-1.916-1.056l-.07-.105H5.025a1.125 1.125 0 01-1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h2.25c.16 0 .315-.02.465-.06l2.735-4.738a2.022 2.022 0 01-1.68-3.053.12.12 0 00-.036-.05c-.3-.3-.417-.714-.35-1.109.11-1.07.95-1.9 2-1.9.176 0 .344.024.5.068zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span><strong class="text-cyan-600">Edad:</strong> 10+ años</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-cyan-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                                    </svg>
+                                    <span><strong class="text-cyan-600">Componentes:</strong> 56 fichas 3D (se usan 28 por juego), manual, guía educativa</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- BOTÓN VOLVER -->
+                <div class="text-center mt-16">
+                    <a href="index.html#juegos" class="inline-flex items-center bg-cyan-500 text-white font-bold font-heading text-lg px-10 py-4 rounded-xl hover:bg-cyan-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-cyan-500/40">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                        </svg>
+                        Volver a Todos los Juegos
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER MEJORADO -->
+    <footer id="contacto" class="bg-gradient-to-br from-gray-50 to-cyan-50 border-t border-gray-200 py-16 md:py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
+                
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+                            <span class="text-white font-logo font-bold text-xl">IX</span>
+                        </div>
+                        <span class="text-3xl font-bold font-logo text-cyan-500">IX-GAMES</span>
+                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed text-justify mb-6 max-w-lg">
+                        Construimos universos en tu mesa a través de juegos educativos innovadores que combinan diversión y aprendizaje para todas las edades.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group border border-gray-200">
+                            <svg class="w-5 h-5 text-gray-600 group-hover:text-cyan-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.07 4.227H5.11z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group border border-gray-200">
+                            <svg class="w-5 h-5 text-gray-600 group-hover:text-cyan-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.229-1.667 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.229 1.667-4.771 4.919-4.919 1.266.058 1.646.07 4.85.07zM12 0C8.74 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.687.073-4.947s-.014-3.667-.072-4.947C23.727 2.69 21.31.27 16.947.072 15.667.014 15.26 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group border border-gray-200">
+                            <svg class="w-5 h-5 text-gray-600 group-hover:text-cyan-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.35C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h5.88c.734 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading text-xl font-bold text-gray-800 mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#inicio" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Inicio</a></li>
+                        <li><a href="index.html#juegos" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Nuestro Juego</a></li>
+                        <li><a href="index.html#quienes-somos" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Quiénes Somos</a></li>
+                        <li><a href="index.html#vision" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Visión</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading text-xl font-bold text-gray-800 mb-6">Contacto</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span class="text-gray-600">info@ix-games.com</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-gray-600">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-gray-600">Coronel Terrada 3900, La Matanza, Buenos Aires, Argentina</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-600">&copy; 2025 <span class="font-bold text-cyan-500">IX-GAMES</span>. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="flex space-x-6 text-sm text-gray-500">
+                        <a href="#" class="hover:text-cyan-500 transition-colors">Política de Privacidad</a>
+                        <a href="#" class="hover:text-cyan-500 transition-colors">Términos de Servicio</a>
+                        <a href="#" class="hover:text-cyan-500 transition-colors">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('bg-white/80', window.scrollY > 50);
+            header.classList.toggle('shadow-md', window.scrollY > 50);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
